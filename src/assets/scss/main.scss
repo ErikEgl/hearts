@@ -1,0 +1,82 @@
+.main {
+  padding: 7rem 0 2vh;
+}
+.main__wrap {
+  @include row-flex();
+}
+.main__item {
+  @include col();
+  @include size(16);
+  display: flex;
+  border-color: #ebebeb;
+  border-radius: 0.25rem;
+  background-color: #f5f5f5;
+  margin-bottom: 2.5rem;
+  @include p10-block() {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main__pic {
+  width: 30%;
+  @include p10-block() {
+    width: 100%;
+  }
+}
+.main__info {
+  width: 70%;
+  padding: 1.875rem 1.875rem 1.875rem 3.125rem;
+  @include p10-block() {
+    width: 100%;
+    padding: 0.875rem 0.875rem 0.875rem 1.125rem;
+  }
+}
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.main__title {
+  font-size: 2vw;
+  line-height: 1.5;
+  font-weight: 400;
+  @include p10-block() {
+    font-size: 3rem;
+  }
+  @include p7-block() {
+    font-size: 2rem;
+  }
+}
+.main__ico {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  @include p10-block() {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.main__add {
+  background-image: url(../svg/plus.svg);
+  margin-left: auto;
+}
+.main__trash {
+  background-image: url(../svg/trash.svg);
+  background-color: #fff;
+}
+.main__text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.main__link {
+  border-bottom-color: $teal;
+  color: $teal;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
