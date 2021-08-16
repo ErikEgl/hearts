@@ -34,6 +34,10 @@
 .main__wrapper {
   display: flex;
   justify-content: space-between;
+  @include p10-block() { 
+
+    flex-direction: column;
+   };
 }
 .main__title {
   font-size: 2vw;
@@ -41,6 +45,8 @@
   font-weight: 400;
   @include p10-block() {
     font-size: 3rem;
+    order: 2;
+    text-align: center;
   }
   @include p7-block() {
     font-size: 2rem;
@@ -51,16 +57,18 @@
   background-size: contain;
   background-position: center;
   width: 50px;
-  height: 50px;
+  height: 50px;  
+  margin-left: auto;
   @include p10-block() {
     width: 25px;
     height: 25px;
+    margin-left: unset;
   }
 }
 
 .main__add {
   background-image: url(../svg/plus.svg);
-  margin-left: auto;
+
 }
 .main__trash {
   background-image: url(../svg/trash.svg);
@@ -71,6 +79,9 @@
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  @include p10-block() { 
+    text-align: center;
+   };
 }
 .main__link {
   border-bottom-color: $teal;
@@ -79,4 +90,8 @@
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
+  @include p10-block() { 
+    justify-content: center;
+    display: flex;
+   };
 }
